@@ -1,0 +1,18 @@
+.form{
+  min-width: 20rem;
+  align-items: center;
+  padding:1rem 1.5rem;
+  border-radius:1.5rem ;
+  background-color: blue;
+  display: inline-block;
+}
+.form_heading{
+  margin:0.5rem 0 ;
+  text-align: center;
+}
+.btn_send{
+  margin: 1rem auto;
+  padding: 0.5rem 3rem;
+  display: flex;
+  align-self: center;
+}
