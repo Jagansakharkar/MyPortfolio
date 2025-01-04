@@ -1,0 +1,16 @@
+.socialLinks_Container {
+  background-color: #1f2937c7;
+  /* width: 4rem; */
+  padding: 0.5rem 0.5rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-top: 8rem;
+  position: absolute;
+}
+
+.github{
+  /* background-color: red; */
+}

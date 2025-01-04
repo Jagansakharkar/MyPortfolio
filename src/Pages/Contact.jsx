@@ -1,11 +1,16 @@
 import React from 'react'
 import { Form } from '../Components/Form'
+import  style  from './Contact.module.css'
 
 export const Contact = () => {
   return (
     <>
-      <h1>Contact</h1>
-      <Form />
+      <section className={style.contactPage}>
+        <div className={style.contactPage_msg}>
+          Lets Connect message us
+        </div>
+        <Form />
+      </section>
     </>
   )
 }

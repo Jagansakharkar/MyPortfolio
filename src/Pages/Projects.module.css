@@ -1,0 +1,11 @@
+.projectsPage_headings {
+  display: flex;
+  justify-content: center;
+}
+
+.heading_Primary {
+  color: #2563EB;
+  display: inline-block;
+  border-bottom: 4px #2563EB solid;
+
+}

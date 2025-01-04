@@ -1,0 +1,11 @@
+.contactPage {
+  padding: 5rem 0 0 5.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.contactPage_msg {
+  font-size: 4rem;
+  color: #2563EB;
+}

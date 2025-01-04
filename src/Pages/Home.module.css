@@ -1,0 +1,25 @@
+.home{
+  padding:4rem 1rem 0 5rem;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+.heading_primary{
+  font-size: 2rem;
+}
+.heading_secondary{
+  font-size: 1.5rem;
+}
+.heading_tertary{
+  font-size: 1rem;
+}
+.name{
+  color: blue;
+}
+
+.btn_getCV{
+  margin-left: 2rem;
+  background-color: #3B82F6 ;
+}
+.btn_hire{
+  background-color: #3B82F6 ;
+}
