@@ -1,25 +1,37 @@
-.home{
-  padding:4rem 1rem 0 5rem;
+.home {
+  padding: 0 4.5rem;
   display: grid;
   grid-template-columns: 60% 40%;
+
 }
-.heading_primary{
+
+.left {
+  padding: 5rem 0;
+
+}
+
+.heading_primary {
   font-size: 2rem;
 }
-.heading_secondary{
+
+.heading_secondary {
   font-size: 1.5rem;
 }
-.heading_tertary{
+
+.heading_tertary {
   font-size: 1rem;
 }
-.name{
+
+.name {
   color: blue;
 }
 
-.btn_getCV{
-  margin-left: 2rem;
-  background-color: #3B82F6 ;
+.btn_getCV {
+
+  margin: 1.3rem 0 0 2rem;
+  background-color: #3B82F6;
 }
-.btn_hire{
-  background-color: #3B82F6 ;
+
+.btn_hire {
+  background-color: #3B82F6;
 }

@@ -1,25 +1,33 @@
 .links {
-  width: 40%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
 }
 
 .header {
-  padding-left: 4.5rem;
+  padding: 1rem 4.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.logo{
+
+.logo {
   color: #2563EB;
   font-weight: 700;
-  line-height: 1.2;
+
 }
-a{
-  color:#1E40AF ;
+
+a {
+  color: #1E40AF;
 }
+
 a:active {
 
   border-bottom: 3px #2563EB solid;
 
-} 
+}
+
+.icon_lightDark {
+  font-size: 1.2rem;
+  cursor: pointer;
+}

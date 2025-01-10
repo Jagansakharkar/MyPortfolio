@@ -1,0 +1,19 @@
+/* .light {
+  color: #1F2937;
+  background-color: #F3F4F6;
+}
+
+.dark {
+  color: #F3F4F6;
+  background-color: #1F2937;
+} */
+
+.dark {
+  background-color: #333;
+  color: white;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}

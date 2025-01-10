@@ -1,5 +1,5 @@
 .about{
-  padding-left: 4.4rem;
+  padding:0 4.5rem;
   display: grid;
   grid-template-columns: 60% 40%;
 }
