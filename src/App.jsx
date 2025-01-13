@@ -2,7 +2,7 @@ import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Home } from '../src/Pages/Home'
 import { About } from '../src/Pages/About'
-import { Services } from '../src/Pages/Services'
+import { Skills } from '../src/Pages/Skills'
 import { Projects } from '../src/Pages/Projects'
 import { Contact } from '../src/Pages/Contact'
 import { PageNotFound } from '../src/Pages/PageNotFound'
@@ -27,8 +27,8 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: '/services',
-        element: <Services />,
+        path: '/skills',
+        element: <Skills />,
       },
       {
         path: '/projects',
@@ -38,8 +38,8 @@ const router = createBrowserRouter([
         path: '/contact',
         element: <Contact />,
       },
-      { 
-        path: '*', 
+      {
+        path: '*',
         element: <PageNotFound />,
       }
     ],

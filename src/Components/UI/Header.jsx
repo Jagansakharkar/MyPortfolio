@@ -13,9 +13,9 @@ export const Header = ({ dark, setDark }) => {
         <li><NavLink to='/'>HOME</NavLink></li>
         <li><NavLink to='/about'>ABOUT</NavLink></li>
         <li><NavLink to='/projects'>PROJECTS</NavLink></li>
-        <li><NavLink to='/services'>SERVICES</NavLink></li>
+        <li><NavLink to='/skills'>SKILLS</NavLink></li>
         <li><NavLink to='/contact'>CONTACT</NavLink></li>
-        <li
+        <li className={style.icon}
           onClick={() => setDark(!dark)}
         >
           <MdOutlineDarkMode /></li>

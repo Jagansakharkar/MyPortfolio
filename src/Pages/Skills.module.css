@@ -1,0 +1,62 @@
+.skillsPage {
+  /* padding: 0 4.5rem; */
+}
+
+.skillsPage_headings {
+  display: flex;
+  justify-content: center;
+}
+
+.heading_Primary {
+  color: #2563EB;
+  display: inline-block;
+  border-bottom: 4px #2563EB solid;
+
+}
+
+.skillPage_content div {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.icon {
+  width: 5rem;
+  height: 4.2rem;
+  margin: 0.8rem;
+}
+
+.htmlIcon {
+  color: #E34F26;
+}
+
+.cssIcon {
+  color: #1572B6;
+}
+
+.jsIcon {
+  color: #F7DF1E;
+}
+
+.reactIcon {
+  color: #61DAFB;
+}
+
+.nodeIcon {
+  color: #339933;
+}
+
+.expressIcon {
+  color: #000000;
+}
+
+.mongoIcon {
+  color: #47A248;
+}
+
+.javaIcon {
+  color: #5382a1;
+}
+
+.pythonIcon {
+  color: #FFD43B;
+}

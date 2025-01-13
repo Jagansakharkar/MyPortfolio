@@ -11,12 +11,16 @@ export const Home = () => {
           <div className={style.heading_primary}>a Frontend Developer</div>
         </div>
         <p className={style.home_description}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus exercitationem voluptatum eum doloremque a velit vitae dolores impedit eos recusandae?
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, perspiciatis.
+          Lorem ipsum
         </p>
         <button className={style.btn_hire}>Hire Me</button>
         <button className={style.btn_getCV}>Download CV</button>
       </div>
-      <div className={style.right}></div>
+      <div className={style.right}>
+        <div className={style.photo}>
+          photo
+        </div>
+      </div>
     </section>
   )
 }
