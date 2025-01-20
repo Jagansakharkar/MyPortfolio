@@ -1,33 +1,130 @@
-.links {
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-}
-
+/* General styles for the header */
 .header {
   padding: 1rem 4.5rem;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Ensures dropdown stays within header */
+}
+
+/* Navigation styles */
+.nav {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Logo styles */
 .logo {
   color: #2563EB;
   font-weight: 700;
-
+  font-size: 1.5rem;
 }
 
-a {
+/* Links container */
+.links {
+  display: flex;
+  gap: 3rem;
+}
+
+/* Individual nav links */
+.navLink {
   color: #1E40AF;
+  text-decoration: none;
+  font-weight: 500;
+  transition: border-bottom 0.3s ease;
 }
 
-a:active {
-
-  border-bottom: 3px #2563EB solid;
-
+.navLink:hover {
+  border-bottom: 2px solid #2563EB;
 }
 
+.navLink:active {
+  border-bottom: 3px solid #2563EB;
+}
+
+/* Icon box for theme toggle and menu */
+.iconBox {
+  display: flex; /* Always visible */
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Menu icon styles (hidden on large screens) */
 .icon {
-  font-size: 1rem;
+  height: 2rem;
+  width: 2rem;
   cursor: pointer;
+  display: none; /* Hidden by default */
+}
+
+.themeIcon {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  color: #1E40AF; /* Always visible */
+}
+
+/* Display/hide states for menu icons */
+.on {
+  display: block;
+}
+
+.off {
+  display: none;
+}
+
+/* Small screen links */
+.smallSLinks {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9fafb;
+  position: absolute;
+  top: 100%; /* Positioned below the header */
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 10;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #e5e7eb;
+}
+
+.smallSLinks .navLink {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 992px) {
+  /* Show menu icons only on smaller screens */
+  .icon {
+    display: block; /* Menu icons are visible on small screens */
+  }
+
+  /* Hide main links on smaller screens */
+  .links {
+    display: none;
+  }
+}
+
+@media (min-width: 993px) {
+  /* Hide menu icons on larger screens */
+  .icon {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .header{
+    padding: 1rem 1rem;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .smallSLinks .navLink {
+    font-size: 1rem;
+  }
 }
