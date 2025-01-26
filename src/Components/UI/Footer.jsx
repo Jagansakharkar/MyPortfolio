@@ -3,7 +3,8 @@ import style from "./Footer.module.css"
 
 export const Footer = () => {
   return (
-    <footer className='footer'>
+    <footer className={style.footer}>
+      <p>&copy; All rights reserved to Jagan Sakharkar</p>
 
     </footer>
   )

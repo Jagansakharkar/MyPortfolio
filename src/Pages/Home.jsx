@@ -1,5 +1,6 @@
 import React from 'react'
 import style from "./Home.module.css"
+import { Link } from 'react-router-dom'
 
 export const Home = () => {
   return (
@@ -20,16 +21,14 @@ export const Home = () => {
             </p>
             <div className={style.btns}>
               <button className={style.btn_hire}>Hire Me</button>
-              <button className={style.btn_getCV}>Download CV</button>
+              <button className={style.btn_getCV}> <Link to='/resume'>Download CV</Link></button>
             </div>
           </div>
 
         </div>
 
         <div className={style.right}>
-          <div className={style.photo}>
-            photo
-          </div>
+          <div className={style.photo}></div>
         </div>
       </div>
     </section>

@@ -1,132 +1,155 @@
 .home {
-  margin-top: 4rem;
+  height: 100vh;
+  /* margin-top: 4rem; */
+  display: flex;
+  align-items: center;
+
   padding: 0 4.5rem;
-
-  .grid_container {
-    display: grid;
-    grid-template-areas: "left right";
-
-
-    .left {
-      width: 70%;
-      grid-area: left;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-
-      .intro {
-
-        .intro_text,
-        .greeting,
-        .role,
-        .name {
-          font-size: 2rem;
-        }
-
-        .name {
-          color: #3B82F6;
-        }
-
-        .btns {
-          margin-top: 1.5rem;
-          display: flex;
-          gap: 2rem;
-
-          .btn_getCV {
-
-            /* margin: 1.3rem 0 0 2rem; */
-            background-color: #3B82F6;
-          }
-
-          .btn_hire {
-            background-color: #3B82F6;
-          }
-        }
-      }
-    }
-
-    .right {
-      grid-area: right;
-
-      .photo {
-        padding: 8rem;
-        /* border-radius: 20rem; */
-        background-color: #3B82F6;
-      }
-    }
-  }
 }
+
+.grid_container {
+  display: grid;
+  grid-template-areas: "left right";
+}
+
+.left {
+  width: 70%;
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.intro .intro_text,
+.intro .greeting,
+.intro .role,
+.intro .name {
+  font-size: 2rem;
+}
+
+.intro .name {
+  color: #3B82F6;
+}
+
+.intro .btns {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.intro .btns .btn_getCV,
+.intro .btns .btn_hire {
+  background-color: #3B82F6;
+}
+
+.right {
+  grid-area: right;
+  width: 100%;
+
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.right .photo {
+  padding: 8rem;
+  /* background-color: #3B82F6; */
+  background-image: url("../assets/myphoto.jpg");
+  /* Use background-image */
+  background-size: cover;
+  /* Ensures the image covers the element */
+  background-position: center;
+  /* Ensures the image covers the element */
+
+  height: 15rem;
+  width: 15rem;
+  border: 2px solid red;
+  /* Add 'solid' to make the border visible */
+  border-radius: 50%;
+}
+
+
+
 
 @media (max-width: 576px) {
 
   /* Styles for small devices (phones) */
   .home {
     margin-top: 1rem;
-
-
-    .grid_container {
-      display: grid;
-      grid-template-areas:
-        "right"
-        " left";
-
-      .left {
-        width: 100%;
-        margin-top: 1rem;
-        text-align: center;
-
-        .btns {
-          display: flex;
-          align-self: center;
-          gap: 2rem;
-        }
-      }
-
-      .right {
-        width: 100%;
-      }
-    }
+    padding: 0 1rem;
+    /* Adjust padding for smaller screens */
   }
+
+  .grid_container {
+    grid-template-areas:
+      "right"
+      "left";
+  }
+
+  .left {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .intro .btns {
+    flex-direction: column;
+    /* Change flex direction to column */
+    align-self: center;
+    gap: 1rem;
+    /* Adjust gap for smaller screens */
+  }
+
+  .right {
+    width: 100%;
+  }
+
+
 }
 
 @media (max-width: 768px) {
   .home {
     margin-top: 1rem;
-
-    .grid_container {
-      display: grid;
-
-      grid-template-areas:
-        "right"
-        " left";
-
-
-      .left {
-        width: 100%;
-        margin-top: 1rem;
-
-        .intro {
-          text-align: center;
-          line-height: 1.8rem;
-
-          .btns {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-          }
-        }
-      }
-
-      .right {
-        width: 100%;
-        .photo {}
-      }
-    }
+    padding: 0 2rem;
+    /* Adjust padding for smaller screens */
   }
+
+  .grid_container {
+    grid-template-areas:
+      "right"
+      "left";
+  }
+
+  .left {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .intro {
+    text-align: center;
+    line-height: 1.8rem;
+  }
+
+  .intro .btns {
+    flex-direction: column;
+    /* Change flex direction to column */
+    justify-content: center;
+    gap: 1rem;
+    /* Adjust gap for smaller screens */
+  }
+
+  .right {
+    width: 100%;
+  }
+
 }
 
 @media (max-width: 992px) {
-  /* Styles for large devices (desktops) */
 
+  /* Styles for large devices (desktops) */
+  .home {
+    padding: 0 3rem;
+    /* Adjust padding for larger screens */
+  }
 }

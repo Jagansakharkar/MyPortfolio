@@ -1,10 +1,9 @@
 /* General styles for the header */
 .header {
   padding: 1rem 4.5rem;
-  background-color: aqua;
   display: flex;
   flex-direction: column;
-  position: relative; /* Ensures dropdown stays within header */
+  position: relative;
 }
 
 /* Navigation styles */
@@ -19,7 +18,7 @@
 .logo {
   color: #2563EB;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 /* Links container */
@@ -33,25 +32,46 @@
   color: #1E40AF;
   text-decoration: none;
   font-weight: 500;
-  transition: border-bottom 0.3s ease;
+  position: relative; /* For pseudo-element positioning */
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .navLink:hover {
-  border-bottom: 2px solid #2563EB;
+  color: #2563EB; /* Change color on hover */
 }
 
 .navLink:active {
-  border-bottom: 3px solid #2563EB;
+  color: #2563EB;
+}
+
+/* Add pseudo-element for the border effect */
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Position below the text */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2563EB;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%; /* Full width on hover */
+}
+
+.navLink:active::after {
+  height: 3px; /* Thicker border for active state */
 }
 
 /* Icon box for theme toggle and menu */
 .iconBox {
-  display: flex; /* Always visible */
+  display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-/* Menu icon styles (hidden on large screens) */
+/* Menu icon styles */
 .icon {
   height: 2rem;
   width: 2rem;
@@ -59,6 +79,7 @@
   display: none; /* Hidden by default */
 }
 
+/* Theme icon */
 .themeIcon {
   height: 2rem;
   width: 2rem;
@@ -77,54 +98,59 @@
 
 /* Small screen links */
 .smallSLinks {
-  display: none; /* Hidden by default */
-  flex-direction: column;
-  align-items: center;
-  background-color: #f9fafb;
-  position: absolute;
-  top: 100%; /* Positioned below the header */
-  left: 0;
-  width: 100%;
-  padding: 1rem 0;
-  z-index: 10;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-top: 1px solid #e5e7eb;
+  display: none;
 }
 
 .smallSLinks .navLink {
-  margin: 0.5rem 0;
+  width: min-content;
   font-size: 1.2rem;
 }
 
 /* Media queries for responsiveness */
-@media (max-width: 992px) {
-  /* Show menu icons only on smaller screens */
+@media (max-width: 576px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.7rem;
+  }
+
+  .smallSLinks {
+    background-color: aliceblue;
+    padding: 2rem;
+    display: block;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
   .icon {
-    display: block; /* Menu icons are visible on small screens */
+    display: block; /* Make icon visible on small screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 1.5rem;
+  }
+
+  .icon {
+    display: block; /* Make icon visible on small screens */
   }
 
   /* Hide main links on smaller screens */
   .links {
     display: none;
   }
+  .photo{}
 }
 
 @media (min-width: 993px) {
-  /* Hide menu icons on larger screens */
   .icon {
-    display: none;
-  }
-}
-
-@media (max-width: 576px) {
-  .header{
-    padding: 1rem 1rem;
-  }
-  .logo {
-    font-size: 1.2rem;
-  }
-
-  .smallSLinks .navLink {
-    font-size: 1rem;
+    display: none; /* Hide icon on large screens */
   }
 }
